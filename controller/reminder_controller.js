@@ -3,10 +3,10 @@ const { reminderModel } = require("../models/reminderModel");
 let remindersController = {
   list: async (req, res) => {
     const reminders = await reminderModel.findByUser(req.user.id);
-    res.render("reminder/index", { 
+    res.render("reminder/index", {
       reminders,
       user: req.user.name,
-      imageUrl: req.user.imageUrl
+      imageUrl: req.user.imageUrl,
     });
   },
 
@@ -42,10 +42,9 @@ let remindersController = {
   },
 
   update: async (req, res) => {
-
     const reminderID = req.params.id;
     const reminderData = Object.assign({}, req.body);
-    reminderData.completed = (reminderData.completed === "true")
+    reminderData.completed = reminderData.completed === "true";
 
     await reminderModel.updateOne(reminderID, reminderData);
 
@@ -54,7 +53,7 @@ let remindersController = {
 
   delete: async (req, res) => {
     const reminderId = req.params.id;
-    await reminderModel.deleteOne(reminderId)
+    await reminderModel.deleteOne(reminderId);
     res.redirect("/reminders");
   },
 };

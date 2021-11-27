@@ -1,10 +1,9 @@
 const imgur = require("imgur");
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
 const { registerUser } = require("../controller/userController");
 const fs = require("fs");
 
 let authController = {
-  
   login: (req, res) => {
     res.render("auth/login");
   },
@@ -47,8 +46,8 @@ let authController = {
 
   logout: (req, res) => {
     req.logout();
-    res.redirect('/auth/login');
-  }
+    res.redirect("/auth/login");
+  },
 };
 
 module.exports = authController;

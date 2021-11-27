@@ -39,13 +39,13 @@
 
 # Sprint 4 - Nov 23, 2021:
 ### Adel Kuanysheva
-1.
-2.
+1. Installed Prisma and all relevant packages 
+2. Change backend code to use sqlite database (Reminders)
 
 ### Bosco Chan
-1.
-2.
+1. Change backend code to use sqlite database (Auth and User)
+2. Bug fixing 
 
 ### Jeremy Lam
-1.
-2.
+1. Change backend code to use sqlite database (Reminders)
+2. Bug fixing 
